@@ -5,7 +5,7 @@ import os
 
 def install():
     make_custom_fields()
-
+    create_standard_item_groups()
 def make_custom_fields():
 
 	custom_fields = {
@@ -357,7 +357,23 @@ def make_custom_fields():
             "fieldtype": "Long Text",
             "label": "Comment"
             }
-        ]
-    }
-
+        	]
+    	}
 	create_custom_fields(custom_fields, ignore_validate=True, update=True)
+def create_standard_item_groups():
+    # List of standard item groups
+    standard_item_groups = ["TYRE", "BATTERY", "PART"]
+
+    for group in standard_item_groups:
+        if not frappe.db.exists("Item Group", group):
+            # Create the Item Group if it doesn't exist
+            item_group = frappe.get_doc({
+                "doctype": "Item Group",
+                "item_group_name": group,
+                "parent_item_group": "All Item Groups",  # Default parent
+                "is_group": 0  # Mark as a leaf node (not a group)
+            })
+            item_group.insert(ignore_permissions=True)
+            frappe.db.commit()  # Commit changes to the database
+
+	
