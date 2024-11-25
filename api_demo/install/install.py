@@ -363,7 +363,7 @@ def make_custom_fields():
 def create_standard_item_groups():
     # List of standard item groups
     standard_item_groups = ["TYRE", "BATTERY", "PART"]
-
+    
     for group in standard_item_groups:
         if not frappe.db.exists("Item Group", group):
             # Create the Item Group if it doesn't exist
@@ -376,4 +376,17 @@ def create_standard_item_groups():
             item_group.insert(ignore_permissions=True)
             frappe.db.commit()  # Commit changes to the database
 
-	
+    standard_price_lists = ["Standard Selling Service"]
+
+    for price_list in standard_price_lists:
+        if not frappe.db.exists("Price List", price_list):
+            # Create the Price List if it doesn't exist
+            price_list_doc = frappe.get_doc({
+                "doctype": "Price List",
+                "price_list_name": price_list,
+                "enabled": 1,
+                "selling": 1,
+		"currency":"SAR"
+            })
+            price_list_doc.insert(ignore_permissions=True)
+            frappe.db.commit()  # Save to the database
