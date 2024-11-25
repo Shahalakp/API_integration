@@ -132,6 +132,18 @@ def make_custom_fields():
 		"Supplier":[
 	    {
 		"doctype": "Supplier",
+                "fieldname": "supplier_primary_address",
+		"reqd": 1,
+		"update": True
+	    },
+	    {
+		"doctype": "Supplier",
+                "fieldname": "supplier_primary_contact",
+		"reqd": 1,
+		"update": True
+	    },
+	    {
+		"doctype": "Supplier",
                 "fieldname": "supplier_code",
                 "fieldtype": "Data",
                 "label": "Supplier Code",
@@ -177,6 +189,18 @@ def make_custom_fields():
             }
         ],
         "Customer":[
+	    {
+		"doctype": "Customer",
+                "fieldname": "customer_primary_address",
+		"reqd": 1,
+		"update": True
+	    },
+	    {
+		"doctype": "Customer",
+                "fieldname": "customer_primary_contact",
+		"reqd": 1,
+		"update": True
+	    },
             {
                 "doctype":"Customer",
                 "fieldname": "customer_id",
@@ -223,7 +247,13 @@ def make_custom_fields():
             }
         ],
 
-        "Address": [
+        "Address": [ 
+	    {
+		"doctype":"Address",
+		"fieldname":"phone",
+		"reqd":1,
+		"update":True
+	    },
             {
                 "doctype": "Address",
                 "fieldname": "address_line1_arabic",
