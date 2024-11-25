@@ -183,8 +183,29 @@ def make_custom_fields():
                 "fieldtype": "Data",
                 "label": "Customer ID",
                 "read_only": 1,
-                "insert_after":"sbasic_info"
+                "insert_after":"basic_info"
             },
+	    {
+		"doctype":"Customer",
+                "fieldname": "building_number",
+                "fieldtype": "Data",
+                "label": "Building Number",
+		"insert_after": "primary_address"
+	    },
+	    {
+		"doctype":"Customer",
+                "fieldname": "street_name",
+                "fieldtype": "Data",
+                "label": "Street Name",
+		"insert_after": "building_number"
+	    },
+	    {
+		"doctype":"Customer",
+                "fieldname": "additional_street_name",
+                "fieldtype": "Data",
+                "label": "Additional Street Name",
+		"insert_after": "street_name"
+	    },
             {
                 "doctype":"Customer",
                 "fieldname": "invoice_type",
