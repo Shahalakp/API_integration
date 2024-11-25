@@ -328,13 +328,13 @@ def make_custom_fields():
 		"reqd":1
 	    }
 	],
-	"Contact Phone"
+	"Contact Phone":[
 	    {
 		"doctype":"Contact Phone",
 		"fieldname":"phone",
 		"reqd":1
 	    }
-	
+	],
         "Purchase Invoice":[
             {                  
             "doctype": "Purchase Invoice",
