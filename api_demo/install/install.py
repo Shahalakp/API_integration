@@ -129,7 +129,7 @@ def make_custom_fields():
             },
 
 		],
-		"Supplier":[
+	"Supplier": [
 	    {
 		"doctype": "Supplier",
                 "fieldname": "supplier_primary_address",
@@ -146,7 +146,7 @@ def make_custom_fields():
                 "fieldtype": "Data",
                 "label": "Supplier Code",
                 "insert_after":"supplier_id"    
-	    }
+	    },
             {
                 "doctype": "Supplier",
                 "fieldname": "supplier_id",
