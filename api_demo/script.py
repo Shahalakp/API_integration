@@ -593,7 +593,7 @@ def purchaseinvoice_api(**kwargs):
     mapped_items = []
     for item in pi_new.items: 
         item_now = frappe.get_doc("Item", item.item_code)
-        if item.slaes_taxes_and_charges_template:
+        if item.sales_taxes_and_charges_template:
             sales_template = frappe.get_doc("Sales Taxes and Charges Template",item.sales_taxes_and_charges_template)
             s_title = sales_template.title
             for detail in sales_template.taxes:
