@@ -132,16 +132,6 @@ def make_custom_fields():
 	"Supplier": [
 	    {
 		"doctype": "Supplier",
-                "fieldname": "supplier_primary_address",
-		"reqd": 1
-	    },
-	    {
-		"doctype": "Supplier",
-                "fieldname": "supplier_primary_contact",
-		"reqd": 1
-	    },
-	    {
-		"doctype": "Supplier",
                 "fieldname": "supplier_code",
                 "fieldtype": "Data",
                 "label": "Supplier Code",
@@ -187,16 +177,6 @@ def make_custom_fields():
             }
         ],
         "Customer":[
-	    {
-		"doctype": "Customer",
-                "fieldname": "customer_primary_address",
-		"reqd": 1
-	    },
-	    {
-		"doctype": "Customer",
-                "fieldname": "customer_primary_contact",
-		"reqd": 1
-	    },
             {
                 "doctype":"Customer",
                 "fieldname": "customer_id",
@@ -244,11 +224,6 @@ def make_custom_fields():
         ],
 
         "Address": [ 
-	    {
-		"doctype":"Address",
-		"fieldname":"phone",
-		"reqd":1
-	    },
             {
                 "doctype": "Address",
                 "fieldname": "state_code",
@@ -293,20 +268,6 @@ def make_custom_fields():
             "insert_after":"map_url"
             }      
         ],
-	"Contact Email": [ 
-	    {
-		"doctype":"Contact Email",
-		"fieldname":"email_id",
-		"reqd":1
-	    }
-	],
-	"Contact Phone":[
-	    {
-		"doctype":"Contact Phone",
-		"fieldname":"phone",
-		"reqd":1
-	    }
-	],
         "Purchase Invoice":[
             {                  
             "doctype": "Purchase Invoice",
