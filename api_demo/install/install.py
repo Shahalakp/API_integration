@@ -283,7 +283,17 @@ def make_custom_fields():
             "fieldtype": "Long Text",
             "label": "Comment"
             }
-        	]
+        	],
+	"Purchase Invoice Item":[
+            {                  
+            "doctype": "Purchase Invoice Item",
+            "insert_after": "sales_price_without_tax",
+   	    "fieldname": "sales_taxes_and_charges_template",
+	   "fieldtype": "Link",
+	   "label": "Slaes Taxes and Charges Template",
+	   "options": "Sales Taxes and Charges Template" 
+            }
+	]
     	}
 	create_custom_fields(custom_fields, ignore_validate=True, update=True)
 def create_standard_item_groups():
