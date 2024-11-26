@@ -183,7 +183,7 @@ def make_custom_fields():
                 "fieldtype": "Data",
                 "label": "Customer ID",
                 "read_only": 1,
-                "insert_after":"basic_info"
+                "insert_after":"naming_series"
             },
 	    {
 		"doctype":"Customer",
@@ -238,13 +238,6 @@ def make_custom_fields():
                 "label": "Map URL",
                 "options": "URL",
                 "insert_after":"geo_coordinates"
-            },
-            {
-                "doctype": "Address",
-                "fieldname": "attributes",
-                "fieldtype": "Data",
-                "label": "Attributes",
-                "insert_after":"address_line_2_arabic"
             },
             {
                 "doctype": "Address",
