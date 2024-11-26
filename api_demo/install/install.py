@@ -251,38 +251,10 @@ def make_custom_fields():
 	    },
             {
                 "doctype": "Address",
-                "fieldname": "address_line1_arabic",
-                "fieldtype": "Data",
-                "label": "Address Line 1- Arabic",
-                "insert_after":"address_line_1"
-            },
-            {
-                "doctype": "Address",
-                "fieldname": "address_line2_arabic",
-                "fieldtype": "Data",
-                "label": "Address Line 2- Arabic",
-                "insert_after":"address_line_2"
-            },
-            {
-                "doctype": "Address",
-                "fieldname": "city_arabic",
-                "fieldtype": "Data",
-                "label": "City- Arabic",
-                "insert_after":"city"
-            },
-            {
-                "doctype": "Address",
                 "fieldname": "state_code",
                 "fieldtype": "Data",
                 "label": "State Code",
                 "insert_after":"state"
-            },
-            {
-                "doctype": "Address",
-                "fieldname": "country_arabic",
-                "fieldtype": "Data",
-                "label": "Country- Arabic",
-                "insert_after":"country"
             },
             {
                 "doctype": "Address",
