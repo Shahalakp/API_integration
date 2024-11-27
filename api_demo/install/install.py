@@ -299,8 +299,15 @@ def make_custom_fields():
 	   "fieldtype": "Link",
 	   "label": "Slaes Taxes and Charges Template",
 	   "options": "Sales Taxes and Charges Template" 
-            }
-	]
+            },
+	    {   
+		"doctype": "Purchase Invoice Item",
+                 "insert_after": "item_tax_template",
+		"fieldname": "sales_price_without_tax",
+		"fieldtype": "Float",
+		"label": "Sales Price (Without Tax)"
+	    },
+	 ]
     	}
 	create_custom_fields(custom_fields, ignore_validate=True, update=True)
 def create_standard_item_groups():
