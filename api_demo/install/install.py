@@ -243,22 +243,29 @@ def make_custom_fields():
                 "doctype": "Address",
                 "fieldname": "geo_coordinates",
                 "fieldtype": "Data",
-                "label": "Geo-coordinates",
-                "insert_after":"attributes"
+                "label": "Geo-Cordinates",
+                "insert_after":"country_code"
+            },
+	     {
+                "doctype": "Address",
+                "fieldname": "attributes",
+                "fieldtype": "Data",
+                "label": "Attributes",
+                "insert_after":"map_url"
             },
             {
                 "doctype": "Address",
                 "fieldname": "country_code",
                 "fieldtype": "Data",
                 "label": "Country Code",
-                "insert_after":"country_arabic"
+                "insert_after":"country"
             },
             {
             "doctype": "Address",
             "fieldname": "neighbourhood",
             "fieldtype": "Data",
             "label": "Neighbourhood",
-            "insert_after":"map_url"
+            "insert_after":"attributes"
             }      
         ],
         "Purchase Invoice":[
